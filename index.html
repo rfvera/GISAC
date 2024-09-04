@@ -590,31 +590,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/jquery.min.js"></script>
     		<script src="assets/js/lightbox.min.js"></script>
 			<!-- Incluir el archivo JS de Lightbox2 desde CDN -->
-			<script>
-				// Manejar la apertura de videos en lightbox
-				lightbox.option({
-					'resizeDuration': 200,
-					'wrapAround': true,
-					'disableScrolling': true
-				});
-		
-				document.querySelectorAll('[data-lightbox="youtube"]').forEach(item => {
-					item.addEventListener('click', function(event) {
-						event.preventDefault();
-						var videoUrl = this.href;
-						var videoEmbed = `
-							<div class="lightbox-video">
-								<iframe width="560" height="315" src="${videoUrl}?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-						`;
-						lightbox.open({
-							html: videoEmbed,
-							maxWidth: 800,
-							maxHeight: 450
-						});
-					});
-				});
-			</script>
+			
 
 	</body>
 </html>
