@@ -20,7 +20,7 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="image">
-							</span><img src="images/logo_gisac.png" alt="GISAC" style="width: 200px; height: 200px"></span>
+							</span><img src="images/logo_gisac_t.png" alt="GISAC" style="width: 200px; height: 200px"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
@@ -119,7 +119,7 @@
 										}
 								
 										.video-item img {
-											max-width: 100%;
+											width: 100%;
 											height: auto;
 											display: block;
 										}
@@ -145,16 +145,16 @@
 								
 										.lightbox-content {
 											position: relative;
-											width: 80%;
-											height: 25%;
+											width: 100%;
+											height: 35%;
 											display: flex;
 											justify-content: center;
 											align-items: center;
 										}
 								
 										.lightbox-content iframe {
-											width: 100%;
-											height: 100%;
+											width: 80%;
+											height: 80%;
 											border: none;
 										}
 								
@@ -331,38 +331,7 @@
 									<title>Galería de Fotos</title>
 									
 									<style>
-										body {
-											font-family: Arial, sans-serif;
-											background-color: #333;
-											margin: 0;
-											padding: 20px;
-											text-align: center;
-											color: #fff;
-										}
-								
-										h2 {
-											margin-bottom: 20px;
-											color: #f0e68c;
-										}
-								
-										.gallery {
-											display: flex;
-											flex-wrap: wrap;
-											justify-content: center;
-											gap: 20px;
-										}
-								
-										.gallery-item {
-											position: relative;
-											border: 2px solid #ccc;
-											border-radius: 10px;
-											overflow: hidden;
-											transition: transform 0.3s ease, box-shadow 0.3s ease;
-											max-width: 300px;
-											text-align: center;
-											background-color: #fff;
-										}
-								
+																		
 										.gallery-item img {
 											width: 100%;
 											height: auto;
@@ -388,61 +357,7 @@
 											text-align: center;
 										}
 								
-										/* Lightbox estilo */
-										.lightbox {
-											display: none;
-											position: fixed;
-											z-index: 1000;
-											left: 0;
-											top: 0;
-											width: 100%;
-											height: 100%;
-											background-color: rgba(0, 0, 0, 0.8);
-											justify-content: center;
-											align-items: center;
-										}
-								
-										.lightbox-content {
-											position: relative;
-											width: 80%;
-											height: 80%;
-											display: flex;
-											justify-content: center;
-											align-items: center;
-										}
-								
-										.lightbox-content img {
-											width: 100%;
-											height: 100%;
-											object-fit: contain;
-										}
-								
-										.lightbox-close {
-											position: absolute;
-											top: 10px;
-											right: 10px;
-											color: white;
-											font-size: 30px;
-											cursor: pointer;
-										}
-								
-										.lightbox-arrow {
-											position: absolute;
-											top: 50%;
-											transform: translateY(-50%);
-											font-size: 50px;
-											color: white;
-											cursor: pointer;
-											z-index: 1001;
-										}
-								
-										.lightbox-arrow.left {
-											left: 10px;
-										}
-								
-										.lightbox-arrow.right {
-											right: 10px;
-										}
+										
 									</style>
 								
 								<body>
@@ -844,12 +759,23 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					});
 				});
 			</script>
-			  <script>
+			<script>
 				const photoGallery = [
-					'images/galeria/antuco.jpg',
-					'images/galeria/antuco2.jpg',
-					'images/galeria/calafquen.jpg',
-					'images/galeria/canonantuco.jpg'
+					"images/galeria/antuco.jpg", 
+					"images/galeria/antuco2.jpg",
+					"images/galeria/calafquen.jpg",
+					"images/galeria/canonantuco.jpg",
+					"images/galeria/ranco.jpg",
+					"images/galeria/condortierradelfuego.jpg",
+					"images/galeria/hongollanadagrande.jpg",
+					"images/galeria/lagoazul.jpg", 
+					"images/galeria/lagopehoe.jpg",
+					"images/galeria/lagotaguatagua.jpg",
+					"images/galeria/porvenir.jpg", 
+					"images/galeria/puentellanadagrande.jpg",
+					"images/galeria/tierradelfuego.jpg",
+					"images/galeria/yelcho2.jpg", 
+					"images/galeria/yendegaya.jpg"																							
 				];
 		
 				let currentIndex = 0;
