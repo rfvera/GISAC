@@ -72,75 +72,184 @@
 
 						<!-- lagos -->
 							<article id="lagos">
-								<h2 class="major">Lagos</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="Playa de Llifén, Lago Ranco, Chile" /></span>
-								<div class="overlay">
-									<p class="description">Playa de Llifén, Lago Ranco, Chile</p>
-								</div>
-								<p>El proyecto “Evaluación del estado ambiental de los lagos utilizados con actividades de acuicultura en la zona sur de Chile”, es un programa de estudio que nació para obtener información actualizada del estado ambiental y capacidad de carga de los lagos donde se desarrolla la actividad de acuicultura en balsas jaula dentro de los lagos, ésto dado que la Ley General de Pesca y Acuicultura (LGPA) y sus resoluciones acompañantes, mandatan que los sistemas acuáticos donde se realice acuicultura deben encontrarse en equilibrio ecológico, sin sobrepasar la capacidad de carga del lago y con buenas condiciones de oxígeno. La acuicultura en los lagos de Chile se centra en el cultivo de salmónidos, el ciclo de vida de estos peces incluye etapas de cultivo que requieren de agua dulce. Esta actividad se está realizando en los lagos del sur de Chile aproximadamente desde los años 80´s. Se debe considerar también que hasta antes de la ejecución de este estudio, las evaluaciones ambientales de estos lagos generalmente estaban dadas por estudios esporádicos, lo cual no permitía darle un seguimiento a la evolución de la calidad ambiental. Por ello la importancia del desarrollo de este programa de estudio que desde el año 2012 ha estado evaluando ambientalmente estos lagos.</p>
-								<p>La red de monitoreo del programa de estudio comprende el muestreo anual de los lagos Araucanos: Ranco, Puyehue, Rupanco, Llanquihue y Chapo; los lagos Chilotes: Cucao - Huillinco, Natri, y Tarahuin; y de los lagos Patagónicos: Yelcho y Riesco. En ellos se realiza un monitoreo estival, y adicionalmente un monitoreo mensual del lago Llanquihue. Se hace énfasis en el estudio del lago Llanquihue, ya que se le considera altamente vulnerable a la eutroficación, debido a sus múltiples servicios ecosistémicos, y al largo tiempo de renovación de sus aguas. Se estima como prioritario el estudio continuo del lago Llanquihue, de modo que sea posible comprender de mejor forma el funcionamiento de este ecosistema.</p>
-								
-								<style>
-										.video-container {
-										display: flex;
-										flex-direction: column;
-										height: 50vh; /* Ocupa el 50% de la altura de la viewport */
-										width: flex;
-									}
+								<head>
+									<h2 class="major">Lagos</h2>
+									<span class="image main"><img src="images/pic02.jpg" alt="Playa de Llifén, Lago Ranco, Chile" /></span>
+									<div class="overlay">
+										<p class="description">Playa de Llifén, Lago Ranco, Chile</p>
+									</div>
+									<p>El proyecto “Evaluación del estado ambiental de los lagos utilizados con actividades de acuicultura en la zona sur de Chile”, es un programa de estudio que nació para obtener información actualizada del estado ambiental y capacidad de carga de los lagos donde se desarrolla la actividad de acuicultura en balsas jaula dentro de los lagos, ésto dado que la Ley General de Pesca y Acuicultura (LGPA) y sus resoluciones acompañantes, mandatan que los sistemas acuáticos donde se realice acuicultura deben encontrarse en equilibrio ecológico, sin sobrepasar la capacidad de carga del lago y con buenas condiciones de oxígeno. La acuicultura en los lagos de Chile se centra en el cultivo de salmónidos, el ciclo de vida de estos peces incluye etapas de cultivo que requieren de agua dulce. Esta actividad se está realizando en los lagos del sur de Chile aproximadamente desde los años 80´s. Se debe considerar también que hasta antes de la ejecución de este estudio, las evaluaciones ambientales de estos lagos generalmente estaban dadas por estudios esporádicos, lo cual no permitía darle un seguimiento a la evolución de la calidad ambiental. Por ello la importancia del desarrollo de este programa de estudio que desde el año 2012 ha estado evaluando ambientalmente estos lagos.</p>
+									<p>La red de monitoreo del programa de estudio comprende el muestreo anual de los lagos Araucanos: Ranco, Puyehue, Rupanco, Llanquihue y Chapo; los lagos Chilotes: Cucao - Huillinco, Natri, y Tarahuin; y de los lagos Patagónicos: Yelcho y Riesco. En ellos se realiza un monitoreo estival, y adicionalmente un monitoreo mensual del lago Llanquihue. Se hace énfasis en el estudio del lago Llanquihue, ya que se le considera altamente vulnerable a la eutroficación, debido a sus múltiples servicios ecosistémicos, y al largo tiempo de renovación de sus aguas. Se estima como prioritario el estudio continuo del lago Llanquihue, de modo que sea posible comprender de mejor forma el funcionamiento de este ecosistema.</p>
 									
-									#youtube-video {
-										flex: 1; /* Ocupa todo el espacio disponible */
-									}
-								</style>
-									<body>
-										<div class="video-container">
-											<button id="play-button">Michai</button>
-											<iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/pvKmk9GJYVI" frameborder="0" allowfullscreen></iframe>
-										</div>
+								</head>
+								<body>
+									<style>
+										/* Estilos generales de la galería */
+										body {
+											font-family: Arial, sans-serif;
+											background-color: #333;
+											margin: 0;
+											padding: 20px;
+											text-align: center;
+										}
+								
+										h2 {
+											color: #f0e68c;
+											margin-bottom: 20px;
+										}
+								
+										.gallery {
+											display: flex;
+											flex-wrap: wrap;
+											justify-content: center;
+											gap: 20px;
+											margin-bottom: 50px;
+										}
+								
+										.video-item {
+											position: relative;
+											border: 2px solid #ccc;
+											border-radius: 10px;
+											overflow: hidden;
+											transition: transform 0.3s ease, box-shadow 0.3s ease;
+											max-width: 200px;
+											text-align: center;
+											background-color: #fff;
+											cursor: pointer;
+										}
+								
+										.video-item img {
+											max-width: 100%;
+											height: auto;
+											display: block;
+										}
+								
+										.video-item:hover {
+											transform: scale(1.05);
+											box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+										}
+								
+										/* Lightbox estilo */
+										.lightbox {
+											display: none;
+											position: fixed;
+											z-index: 1000;
+											left: 0;
+											top: 0;
+											width: 100%;
+											height: 100%;
+											background-color: rgba(0, 0, 0, 0.8);
+											justify-content: center;
+											align-items: center;
+										}
+								
+										.lightbox-content {
+											position: relative;
+											width: 80%;
+											height: 25%;
+											display: flex;
+											justify-content: center;
+											align-items: center;
+										}
+								
+										.lightbox-content iframe {
+											width: 100%;
+											height: 100%;
+											border: none;
+										}
+								
+										.lightbox-close {
+											position: absolute;
+											top: 10px;
+											right: 10px;
+											color: white;
+											font-size: 30px;
+											cursor: pointer;
+										}
+								
+										.lightbox-arrow {
+											position: absolute;
+											top: 50%;
+											transform: translateY(-50%);
+											font-size: 50px;
+											color: white;
+											cursor: pointer;
+											z-index: 1001;
+										}
+								
+										.lightbox-arrow.left {
+											left: 10px;
+										}
+								
+										.lightbox-arrow.right {
+											right: 10px;
+										}
+									</style>
 
-										<div class="video-container">
-											<button id="play-button">Botellas Niskin</button>
-											<iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/U_d6ENff3aM?si=Vvz8G0gp01Ne3CZ_" frameborder="0" allowfullscreen></iframe>
+									<h2>Galería de Videos</h2>
+									<div class="gallery">
+										<div class="video-item" data-gallery="gallery1" data-index="0">
+											<img src="https://img.youtube.com/vi/pvKmk9GJYVI/0.jpg" alt="Video 1">
 										</div>
-									<body>	
+										<div class="video-item" data-gallery="gallery1" data-index="1">
+											<img src="https://img.youtube.com/vi/U_d6ENff3aM&t=9s/0.jpg" alt="Video 2">
+										</div>
+										
+									</div>
+									   <!-- Lightbox para galería 1 -->
+									<div class="lightbox" id="lightbox1">
+										<div class="lightbox-content">
+											<span class="lightbox-close" onclick="closeLightbox('lightbox1')">&times;</span>
+											<iframe id="lightbox-video1" src="" allowfullscreen></iframe>
+											<span class="lightbox-arrow left" onclick="previousVideo('gallery1')">&#10094;</span>
+											<span class="lightbox-arrow right" onclick="nextVideo('gallery1')">&#10095;</span>
+										</div>
+									</div>						
+								<body>
 							</article>
 								
 
 						<!-- didymo -->
 							<article id="didymo">
-								<h2 class="major">Didymo</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="Muestreo de Didymo en Antuco, Chile<" /></span>
-								<div class="overlay">
-									<p class="description">Muestreo de Didymo en Antuco, Chile</p>
-								</div>
-									<p>En esta pagina, encontrara informacion del estudio sobre la plaga Didymosphenia geminata en ecosistemas acuáticos de Chile, cubre el progreso entre septiembre de 2023 y julio de 2024. Durante este período, se realizaron dos campañas de monitoreo y prospección en distintas regiones, muestreando estaciones para recolectar microalgas, macroinvertebrados y agua para análisis de nutrientes. Los análisis de fitoplancton y fitobentos están completos, mientras que los análisis de macroinvertebrados y agua aún están en proceso. <a href="https://rod-j-bot.github.io/didimo2024">Si quieres saber mas Pincha Aqui</a>.</p> 
-								
-									<style>
-										.video-container {
-										display: flex;
-										flex-direction: column;
-										height: 50vh; /* Ocupa el 50% de la altura de la viewport */
-										width: flex;
-									}
+								<head>
+									<h2 class="major">Didymo</h2>
+									<span class="image main"><img src="images/pic03.jpg" alt="Muestreo de Didymo en Antuco, Chile<" /></span>
+									<div class="overlay">
+										<p class="description">Muestreo de Didymo en Antuco, Chile</p>
+									</div>
+										<p>En esta pagina, encontrara informacion del estudio sobre la plaga Didymosphenia geminata en ecosistemas acuáticos de Chile, cubre el progreso entre septiembre de 2023 y julio de 2024. Durante este período, se realizaron dos campañas de monitoreo y prospección en distintas regiones, muestreando estaciones para recolectar microalgas, macroinvertebrados y agua para análisis de nutrientes. Los análisis de fitoplancton y fitobentos están completos, mientras que los análisis de macroinvertebrados y agua aún están en proceso. <a href="https://rod-j-bot.github.io/didimo2024">Si quieres saber mas Pincha Aqui</a>.</p> 
 									
-									#youtube-video {
-										flex: 1; /* Ocupa todo el espacio disponible */
-									}
-								</style>
-								<body>
-									<h2></h2>
-									<div class="video-container">
-										<button id="play-button">Muestreo Tierra del fuego" </button>
-										<iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/fugvfrOe-BM" frameborder="0" allowfullscreen></iframe>
-									</div>
-									<h2></h2>
-									<div class="video-container">
-										<button id="play-button">Muestreo Lago Toro</button>
-										<iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/fV_ro2VSdlw" frameborder="0" allowfullscreen></iframe>
-									</div>
-								<body>	
+										
+									</head>
+									<body>
+									
+										<h2>Galería de Videos</h2>
+										<div class="gallery">
+											<div class="video-item" data-gallery="gallery2" data-index="0">
+												<img src="https://img.youtube.com/vi/fV_ro2VSdlw.jpg" alt="Video 3">
+											</div>
+											<div class="video-item" data-gallery="gallery2" data-index="1">
+												<img src="https://img.youtube.com/vi/fugvfrOe-BM/0.jpg" alt="Video 4">
+											</div>
+											
+										</div>
+
+										  <!-- Lightbox para galería 2 -->
+										<div class="lightbox" id="lightbox2">
+											<div class="lightbox-content">
+												<span class="lightbox-close" onclick="closeLightbox('lightbox2')">&times;</span>
+												<iframe id="lightbox-video2" src="" allowfullscreen></iframe>
+												<span class="lightbox-arrow left" onclick="previousVideo('gallery2')">&#10094;</span>
+												<span class="lightbox-arrow right" onclick="nextVideo('gallery2')">&#10095;</span>
+											</div>
+										</div>
+																	
+										
+									
+									</body>
+	
 							
-								</article>
+							</article>
 
 						<!-- integrantes -->
 							<article id="integrantes">
@@ -249,7 +358,7 @@
 											border-radius: 10px;
 											overflow: hidden;
 											transition: transform 0.3s ease, box-shadow 0.3s ease;
-											max-width: 300px; /* Ajusta el tamaño máximo según tu necesidad */
+											max-width: 300px;
 											text-align: center;
 											background-color: #fff;
 										}
@@ -278,75 +387,139 @@
 											font-size: 14px;
 											text-align: center;
 										}
+								
+										/* Lightbox estilo */
+										.lightbox {
+											display: none;
+											position: fixed;
+											z-index: 1000;
+											left: 0;
+											top: 0;
+											width: 100%;
+											height: 100%;
+											background-color: rgba(0, 0, 0, 0.8);
+											justify-content: center;
+											align-items: center;
+										}
+								
+										.lightbox-content {
+											position: relative;
+											width: 80%;
+											height: 80%;
+											display: flex;
+											justify-content: center;
+											align-items: center;
+										}
+								
+										.lightbox-content img {
+											width: 100%;
+											height: 100%;
+											object-fit: contain;
+										}
+								
+										.lightbox-close {
+											position: absolute;
+											top: 10px;
+											right: 10px;
+											color: white;
+											font-size: 30px;
+											cursor: pointer;
+										}
+								
+										.lightbox-arrow {
+											position: absolute;
+											top: 50%;
+											transform: translateY(-50%);
+											font-size: 50px;
+											color: white;
+											cursor: pointer;
+											z-index: 1001;
+										}
+								
+										.lightbox-arrow.left {
+											left: 10px;
+										}
+								
+										.lightbox-arrow.right {
+											right: 10px;
+										}
 									</style>
 								
 								<body>
 									<h2>Galería de Fotos</h2>
 									<div class="gallery">
-										<a class="gallery-item" href="images/galeria/antuco.jpg" data-lightbox="roadtrip" data-title="Antuco">
+										<a class="gallery-item" href="images/galeria/antuco.jpg" onclick="openPhotoLightbox(0)">
 											<img src="images/galeria/antuco.jpg" alt="Antuco"/>
 											<p>Antuco</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/antuco2.jpg" data-lightbox="roadtrip" data-title="Antuco 2">
+										<a class="gallery-item" href="images/galeria/antuco2.jpg" onclick="openPhotoLightbox(1)">
 											<img src="images/galeria/antuco2.jpg" alt="Antuco 2"/>
 											<p>Antuco 2</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/calafquen.jpg" data-lightbox="roadtrip" data-title="Calafquén">
+										<a class="gallery-item" href="images/galeria/calafquen.jpg" onclick="openPhotoLightbox(2)">
 											<img src="images/galeria/calafquen.jpg" alt="Calafquén"/>
 											<p>Calafquén</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/canonantuco.jpg" data-lightbox="roadtrip" data-title="Cañon Antuco">
+										<a class="gallery-item" href="images/galeria/canonantuco.jpg" onclick="openPhotoLightbox(3)">
 											<img src="images/galeria/canonantuco.jpg" alt="Cañon Antuco"/>
 											<p>Cañon Antuco</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/ranco.jpg" data-lightbox="roadtrip" data-title="Ranco">
+										<a class="gallery-item" href="images/galeria/ranco.jpg" onclick="openPhotoLightbox(4)">
 											<img src="images/galeria/ranco.jpg" alt="Ranco"/>
 											<p>Ranco</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/condortierradelfuego.jpg" data-lightbox="roadtrip"data-title="Cóndor Tierra del Fuego">
+										<a class="gallery-item" href="images/galeria/condortierradelfuego.jpg" onclick="openPhotoLightbox(5)">
 											<img src="images/galeria/condortierradelfuego.jpg" alt="Cóndor Tierra del Fuego"/>
 											<p>Cóndor Tierra del Fuego</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/hongollanadagrande.jpg" data-lightbox="roadtrip" data-title="Hongo Llanada Grande">
+										<a class="gallery-item" href="images/galeria/hongollanadagrande.jpg" onclick="openPhotoLightbox(6)">
 											<img src="images/galeria/hongollanadagrande.jpg" alt="Hongo Llanada Grande"/>
 											<p>Hongo Llanada Grande</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/lagoazul.jpg" data-lightbox="roadtrip" data-title="Lago Azul">
+										<a class="gallery-item" href="images/galeria/lagoazul.jpg" onclick="openPhotoLightbox(7)">
 											<img src="images/galeria/lagoazul.jpg" alt="Lago Azul"/>
 											<p>Lago Azul</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/lagopehoe.jpg" data-lightbox="roadtrip" data-title="Lago Pehoe">
+										<a class="gallery-item" href="images/galeria/lagopehoe.jpg" onclick="openPhotoLightbox(8)">
 											<img src="images/galeria/lagopehoe.jpg" alt="Lago Pehoe"/>
 											<p>Lago Pehoe</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/lagotaguatagua.jpg" data-lightbox="roadtrip" data-title="Lago Taguatagua">
+										<a class="gallery-item" href="images/galeria/lagotaguatagua.jpg" onclick="openPhotoLightbox(9)">
 											<img src="images/galeria/lagotaguatagua.jpg" alt="Lago Taguatagua"/>
 											<p>Lago Taguatagua</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/porvenir.jpg" data-lightbox="roadtrip" data-title="Porvenir">
+										<a class="gallery-item" href="images/galeria/porvenir.jpg" onclick="openPhotoLightbox(10)">
 											<img src="images/galeria/porvenir.jpg" alt="Porvenir"/>
 											<p>Porvenir</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/puentellanadagrande.jpg" data-lightbox="roadtrip" data-title="Puente Llanada Grande">
+										<a class="gallery-item" href="images/galeria/puentellanadagrande.jpg" onclick="openPhotoLightbox(11)">
 											<img src="images/galeria/puentellanadagrande.jpg" alt="Puente Llanada Grande"/>
 											<p>Puente Llanada Grande</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/tierradelfuego.jpg" data-lightbox="roadtrip" data-title="Tierra del Fuego">
+										<a class="gallery-item" href="images/galeria/tierradelfuego.jpg" onclick="openPhotoLightbox(12)">
 											<img src="images/galeria/tierradelfuego.jpg" alt="Tierra del Fuego"/>
 											<p>Tierra del Fuego</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/yelcho2.jpg" data-lightbox="roadtrip" data-title="Yelcho 2">
+										<a class="gallery-item" href="images/galeria/yelcho2.jpg" onclick="openPhotoLightbox(13)">
 											<img src="images/galeria/yelcho2.jpg" alt="Yelcho 2"/>
 											<p>Yelcho 2</p>
 										</a>
-										<a class="gallery-item" href="images/galeria/yendegaya.jpg" data-lightbox="roadtrip" data-title="Yendegaya">
+										<a class="gallery-item" href="images/galeria/yendegaya.jpg" onclick="openPhotoLightbox(14)">
 											<img src="images/galeria/yendegaya.jpg" alt="Yendegaya"/>
 											<p>Yendegaya</p>
 										</a>
 										<!-- Agrega más fotos según sea necesario -->
 									</div>
 
-									
+									   <!-- Lightbox para fotos -->
+									<div class="lightbox" id="lightbox-photo">
+										<div class="lightbox-content">
+											<span class="lightbox-close" onclick="closePhotoLightbox()">&times;</span>
+											<img id="lightbox-photo-img" src="" alt="Foto Lightbox">
+											<span class="lightbox-arrow left" onclick="previousPhoto()">&#10094;</span>
+											<span class="lightbox-arrow right" onclick="nextPhoto()">&#10095;</span>
+										</div>
+									</div>
 								</body>
 						
 						</article>
@@ -613,7 +786,97 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/lightbox.min.js"></script>
-			<!-- Incluir el archivo JS de Lightbox2 desde CDN -->
+			<script>
+				const videoGalleries = {
+					gallery1: [
+						'https://www.youtube.com/embed/pvKmk9GJYVI?si=gEaDW2biAMhATx-1',
+						'https://www.youtube.com/embed/U_d6ENff3aM?si=TO4E1ELeB6CEd6JP'
+						],
+						gallery2: [
+						'https://www.youtube.com/embed/fV_ro2VSdlw?si=f8DO34wzWea03y2o',
+						'https://www.youtube.com/embed/fugvfrOe-BM?si=TRgWNfDZsdO1pV6c'
+					]
+				};
+		
+				let currentIndex = 0;
+				let currentGallery = '';
+		
+				function openLightbox(index, gallery) {
+					currentIndex = index;
+					currentGallery = gallery;
+					const lightboxId = gallery === 'gallery1' ? 'lightbox1' : 'lightbox2';
+					const iframeId = gallery === 'gallery1' ? 'lightbox-video1' : 'lightbox-video2';
+					const lightbox = document.getElementById(lightboxId);
+					const iframe = document.getElementById(iframeId);
+		
+					iframe.src = videoGalleries[gallery][currentIndex];
+					lightbox.style.display = 'flex';
+				}
+		
+				function closeLightbox(lightboxId) {
+					const lightbox = document.getElementById(lightboxId);
+					const iframe = document.getElementById(lightboxId.replace('lightbox', 'lightbox-video'));
+					iframe.src = '';
+					lightbox.style.display = 'none';
+				}
+		
+				function nextVideo(gallery) {
+					const lightboxId = gallery === 'gallery1' ? 'lightbox1' : 'lightbox2';
+					const iframeId = gallery === 'gallery1' ? 'lightbox-video1' : 'lightbox-video2';
+					currentIndex = (currentIndex + 1) % videoGalleries[gallery].length;
+					const iframe = document.getElementById(iframeId);
+					iframe.src = videoGalleries[gallery][currentIndex];
+				}
+		
+				function previousVideo(gallery) {
+					const lightboxId = gallery === 'gallery1' ? 'lightbox1' : 'lightbox2';
+					const iframeId = gallery === 'gallery1' ? 'lightbox-video1' : 'lightbox-video2';
+					currentIndex = (currentIndex - 1 + videoGalleries[gallery].length) % videoGalleries[gallery].length;
+					const iframe = document.getElementById(iframeId);
+					iframe.src = videoGalleries[gallery][currentIndex];
+				}
+		
+				document.querySelectorAll('.video-item').forEach(item => {
+					item.addEventListener('click', function() {
+						const gallery = this.getAttribute('data-gallery');
+						const index = parseInt(this.getAttribute('data-index'));
+						openLightbox(index, gallery);
+					});
+				});
+			</script>
+			  <script>
+				const photoGallery = [
+					'images/galeria/antuco.jpg',
+					'images/galeria/antuco2.jpg',
+					'images/galeria/calafquen.jpg',
+					'images/galeria/canonantuco.jpg'
+				];
+		
+				let currentIndex = 0;
+		
+				function openPhotoLightbox(index) {
+					currentIndex = index;
+					const lightbox = document.getElementById('lightbox-photo');
+					const img = document.getElementById('lightbox-photo-img');
+					img.src = photoGallery[currentIndex];
+					lightbox.style.display = 'flex';
+				}
+		
+				function closePhotoLightbox() {
+					const lightbox = document.getElementById('lightbox-photo');
+					lightbox.style.display = 'none';
+				}
+		
+				function nextPhoto() {
+					currentIndex = (currentIndex + 1) % photoGallery.length;
+					document.getElementById('lightbox-photo-img').src = photoGallery[currentIndex];
+				}
+		
+				function previousPhoto() {
+					currentIndex = (currentIndex - 1 + photoGallery.length) % photoGallery.length;
+					document.getElementById('lightbox-photo-img').src = photoGallery[currentIndex];
+				}
+			</script>
 			
 
 	</body>
